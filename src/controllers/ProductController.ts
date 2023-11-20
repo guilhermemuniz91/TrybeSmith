@@ -7,12 +7,12 @@ async function createProduct(req: Request, res: Response) {
   res.status(201).json(newProduct);
 }
 
-// async function readAllProducts(req: Request, res: Response) {
-//   const getAllProduct = await productService.readAllProducts();
-//   return res.status(200).json(getAllProduct.data);
-// }
+async function readAllProducts(req: Request, res: Response) {
+  const getAllProduct = await productService.readAllProducts();
+  return res.status(200).json(getAllProduct.data);
+}
 
 export default {
   createProduct,
-//   readAllProducts,
+  readAllProducts,
 };
